@@ -1,0 +1,93 @@
+/* Background and global font settings */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.game-container {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Board styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Cell styling */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom right, #ffffff, #e0e0e0);
+  border: 3px solid #444;
+  font-size: 48px;
+  line-height: 100px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background-color: #d3e3fc;
+}
+
+/* Color X and O differently */
+.cell:contains('X') {
+  color: #e74c3c;
+}
+
+.cell:contains('O') {
+  color: #3498db;
+}
+
+/* This works with JavaScript textContent styling */
+.cell {
+  color: #000;
+}
+.cell.X {
+  color: #e74c3c; /* red for X */
+}
+.cell.O {
+  color: #3498db; /* blue for O */
+}
+
+/* Status text */
+.status {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px;
+  color: #fff;
+}
+
+/* Restart button */
+button {
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  background: #ff7675;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #d63031;
+}
